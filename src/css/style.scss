@@ -2,6 +2,8 @@ $appWidth: 450px;
 $borderRadius: 4px;
 $borderColor: #cdd6dd;
 $trBackgroundColor: #eee;
+$buttonBackgroundColor: #25a7f1;
+$bmiResultBackgroundColor: #fafaf9;
 
 $underweightTextColor: #055160;
 $underweightBackgroundColor: #cff4fc;
@@ -82,9 +84,9 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
-  background-color: #25a7f1;
+  background-color: $buttonBackgroundColor;
   &:hover {
-    background-color: darken(#25a7f1, 10%);
+    background-color: darken($buttonBackgroundColor, 10%);
   }
 }
 
@@ -103,9 +105,9 @@ select {
   padding: 15px;
   margin-top: 30px;
   line-height: 20px;
-  background-color: #fafaf9;
   border-radius: $borderRadius;
   border: 1px solid $borderColor;
+  background-color: $bmiResultBackgroundColor;
   &.underweight {
     color: $underweightTextColor;
     border-color: $underweightBackgroundColor;
