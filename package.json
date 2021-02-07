@@ -1,8 +1,8 @@
 {
   "name": "bmi",
   "scripts": {
-    "dev": "parcel ./src/index.html --out-dir ./dist --public-url / --port 1280",
-    "build": "parcel build ./src/index.html --out-dir ./dist --public-url / --no-source-maps"
+    "dev": "parcel ./src/html/index.html --out-dir ./dist --public-url / --port 1280",
+    "build": "parcel build ./src/html/index.html --out-dir ./dist --public-url /bmi --no-source-maps"
   },
   "license": "MIT",
   "dependencies": {
