@@ -77,16 +77,16 @@ const App = () => {
                       <div className='col'>
                         <Input
                           id='feet'
-                          type='tel'
                           name='feet'
+                          type='number'
                           placeholder='5'
                         />
                       </div>
 
                       <div className='col'>
                         <Input
-                          type='tel'
                           id='inches'
+                          type='number'
                           name='inches'
                           placeholder='8'
                         />
@@ -97,9 +97,9 @@ const App = () => {
                   <div className='formGroup'>
                     <label htmlFor='pounds'>Weight: pounds</label>
                     <Input
-                      type='tel'
                       id='pounds'
                       name='pounds'
+                      type='number'
                       placeholder='143'
                     />
                   </div>
@@ -110,7 +110,7 @@ const App = () => {
                   <div className='formGroup'>
                     <label htmlFor='centimeters'>Height: centimeters</label>
                     <Input
-                      type='tel'
+                      type='number'
                       id='centimeters'
                       placeholder='173'
                       name='centimeters'
@@ -120,7 +120,7 @@ const App = () => {
                   <div className='formGroup'>
                     <label htmlFor='kilograms'>Weight: kilograms</label>
                     <Input
-                      type='tel'
+                      type='number'
                       id='kilograms'
                       name='kilograms'
                       placeholder='65'
