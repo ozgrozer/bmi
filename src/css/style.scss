@@ -106,23 +106,24 @@ select {
   background-color: #fafaf9;
   border-radius: $borderRadius;
   border: 1px solid $borderColor;
-  &.underweight, &.normal, &.overweight, &.obese {
-    border: none;
-  }
   &.underweight {
     color: $underweightTextColor;
+    border-color: $underweightBackgroundColor;
     background-color: $underweightBackgroundColor;
   }
   &.normal {
     color: $normalTextColor;
+    border-color: $normalBackgroundColor;
     background-color: $normalBackgroundColor;
   }
   &.overweight {
     color: $overweightTextColor;
+    border-color: $overweightBackgroundColor;
     background-color: $overweightBackgroundColor;
   }
   &.obese {
     color: $obeseTextColor;
+    border-color: $obeseBackgroundColor;
     background-color: $obeseBackgroundColor;
   }
 }

@@ -47,19 +47,17 @@ const App = () => {
             type='text'
             id='height'
             name='height'
-            value='173'
             placeholder='173'
             validations={validations.isInt}
           />
         </div>
 
         <div className='formGroup'>
-          <label htmlFor='weight'>Weight: centimeters</label>
+          <label htmlFor='weight'>Weight: kilograms</label>
           <Input
             type='text'
             id='weight'
             name='weight'
-            value='65'
             placeholder='65'
             validations={validations.isInt}
           />
@@ -74,8 +72,7 @@ const App = () => {
         calculatedBmi.status
           ? (
               <div className={`bmiResult ${calculatedBmi.status}`}>
-                <div>Your BMI is <b>{calculatedBmi.bmi}</b></div>
-                <div>Your weight should be <b>{calculatedBmi.bmi}</b> kilograms</div>
+                Your BMI is <b>{calculatedBmi.bmi}</b>
               </div>
             )
           : (<div className='bmiResult'>Type your size above</div>)
