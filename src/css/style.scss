@@ -1,4 +1,6 @@
 $appWidth: 400px;
+$borderRadius: 4px;
+$borderColor: #cdd6dd;
 
 $mobile-max: 767px;
 $tablet-min: 768px;
@@ -50,10 +52,10 @@ input, select, button {
   font-size: 16px;
   padding: 0 15px;
   appearance: none;
-  border-radius: 4px;
   -moz-appearance: none;
   -webkit-appearance: none;
-  border: 1px solid #cdd6dd;
+  border-radius: $borderRadius;
+  border: 1px solid $borderColor;
   &:focus {
     border-color: #7fbdff;
   }
@@ -86,4 +88,50 @@ select {
 
 .invalid-feedback {
   display: none;
+}
+
+.bmiTable {
+  margin-top: 30px;
+  border-radius: $borderRadius;
+  border: 1px solid $borderColor;
+
+  .tr {
+    border-top: 1px solid $borderColor;
+    &.thead {
+      .td {
+        font-weight: bold;
+      }
+    }
+    &.underweight {
+      background-color: #74b9ff;
+    }
+    &.normal {
+      background-color: #54efc4;
+    }
+    &.overweight {
+      background-color: #fab1a0;
+    }
+    &.obese {
+      background-color: #ff7675;
+    }
+    &:first-child {
+      border-top: none;
+    }
+    &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    .td {
+      float: left;
+      padding: 15px;
+      line-height: 20px;
+      border-left: 1px solid $borderColor;
+      &:first-child {
+        width: 170px;
+        border-left: none;
+      }
+    }
+  }
 }
