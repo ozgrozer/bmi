@@ -3,6 +3,11 @@ $borderRadius: 4px;
 $borderColor: #cdd6dd;
 $theadBackgroundColor: #fafaf9;
 
+$underweightColor: #74b9ff;
+$normalColor: #54efc4;
+$overweightColor: #fab1a0;
+$obeseColor: #ff7675;
+
 $mobile-max: 767px;
 $tablet-min: 768px;
 $tablet-max: 991px;
@@ -97,6 +102,21 @@ select {
   background-color: #fafaf9;
   border-radius: $borderRadius;
   border: 1px solid $borderColor;
+  &.underweight, &.normal, &.overweight, &.obese {
+    border: none;
+  }
+  &.underweight {
+    background-color: $underweightColor;
+  }
+  &.normal {
+    background-color: $normalColor;
+  }
+  &.overweight {
+    background-color: $overweightColor;
+  }
+  &.obese {
+    background-color: $obeseColor;
+  }
 }
 
 .bmiTable {
@@ -130,22 +150,22 @@ select {
     }
     &.underweight {
       .td {
-        background-color: #74b9ff;
+        background-color: $underweightColor;
       }
     }
     &.normal {
       .td {
-        background-color: #54efc4;
+        background-color: $normalColor;
       }
     }
     &.overweight {
       .td {
-        background-color: #fab1a0;
+        background-color: $overweightColor;
       }
     }
     &.obese {
       .td {
-        background-color: #ff7675;
+        background-color: $obeseColor;
       }
     }
     &:first-child {
