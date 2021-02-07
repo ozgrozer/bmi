@@ -1,0 +1,22 @@
+$containerWidth: 400px;
+
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 991px;
+$computer-min: 992px;
+$computer-max: 1199px;
+$largescreen-min: 1200px;
+$largescreen-max: 1919px;
+$widescreen-min: 1920px;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body, input, select, button {
+  font-size: 18px;
+  font-family: -apple-system, Ubuntu, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
