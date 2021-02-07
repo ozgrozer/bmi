@@ -33,7 +33,7 @@ const calculateBmi = props => {
 }
 
 const App = () => {
-  const [selectedUnits, setSelectedUnits] = useState('imperial')
+  const [selectedUnits, setSelectedUnits] = useState('metric')
   const [calculatedBmi, setCalculatedBmi] = useState({})
   const [removeItems, setRemoveItems] = useState([])
 
