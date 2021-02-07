@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { Form, Input } from 'rfv'
 
@@ -13,9 +13,29 @@ const validations = {
   ]
 }
 
+const calculateBmi = props => {
+  const { height, weight } = props
+  const height2 = height / 100
+  const bmi = (weight / (height2 * height2)).toFixed(2)
+  let status = ''
+  if (bmi < 18.5) {
+    status = 'underweight'
+  } else if (bmi < 25) {
+    status = 'normal'
+  } else if (bmi < 30) {
+    status = 'overweight'
+  } else {
+    status = 'obese'
+  }
+  return { bmi, status }
+}
+
 const App = () => {
+  const [calculatedBmi, setCalculatedBmi] = useState({})
   const formOnSubmit = res => {
-    console.log(res.items)
+    if (res.isFormValid) {
+      setCalculatedBmi(calculateBmi(res.items))
+    }
   }
 
   return (
@@ -27,6 +47,7 @@ const App = () => {
             type='text'
             id='height'
             name='height'
+            value='173'
             placeholder='173'
             validations={validations.isInt}
           />
@@ -38,6 +59,7 @@ const App = () => {
             type='text'
             id='weight'
             name='weight'
+            value='65'
             placeholder='65'
             validations={validations.isInt}
           />
@@ -48,9 +70,16 @@ const App = () => {
         </div>
       </Form>
 
-      <div className='bmiResult'>
-        Type your size above
-      </div>
+      {
+        calculatedBmi.status
+          ? (
+              <div className={`bmiResult ${calculatedBmi.status}`}>
+                <div>Your BMI is <b>{calculatedBmi.bmi}</b></div>
+                <div>Your weight should be <b>{calculatedBmi.bmi}</b> kilograms</div>
+              </div>
+            )
+          : (<div className='bmiResult'>Type your size above</div>)
+      }
 
       <div className='bmiTable'>
         <div className='tr'>
@@ -58,22 +87,22 @@ const App = () => {
           <div className='td'>Weight Status</div>
         </div>
 
-        <div className='tr'>
+        <div className={`tr ${calculatedBmi.status === 'underweight' ? calculatedBmi.status : ''}`}>
           <div className='td'>Below 18.5</div>
           <div className='td'>Underweight</div>
         </div>
 
-        <div className='tr'>
+        <div className={`tr ${calculatedBmi.status === 'normal' ? calculatedBmi.status : ''}`}>
           <div className='td'>18.5 - 24.9</div>
           <div className='td'>Normal</div>
         </div>
 
-        <div className='tr'>
+        <div className={`tr ${calculatedBmi.status === 'overweight' ? calculatedBmi.status : ''}`}>
           <div className='td'>25.0 - 29.9</div>
           <div className='td'>Overweight</div>
         </div>
 
-        <div className='tr'>
+        <div className={`tr ${calculatedBmi.status === 'obese' ? calculatedBmi.status : ''}`}>
           <div className='td'>30.0 and above</div>
           <div className='td'>Obese</div>
         </div>

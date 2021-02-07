@@ -3,10 +3,14 @@ $borderRadius: 4px;
 $borderColor: #cdd6dd;
 $theadBackgroundColor: #fafaf9;
 
-$underweightColor: #74b9ff;
-$normalColor: #54efc4;
-$overweightColor: #fab1a0;
-$obeseColor: #ff7675;
+$underweightTextColor: #055160;
+$underweightBackgroundColor: #cff4fc;
+$normalTextColor: #0f5132;
+$normalBackgroundColor: #d1e7dd;
+$overweightTextColor: #664d03;
+$overweightBackgroundColor: #fff3cd;
+$obeseTextColor: #842029;
+$obeseBackgroundColor: #f8d7da;
 
 $mobile-max: 767px;
 $tablet-min: 768px;
@@ -106,16 +110,20 @@ select {
     border: none;
   }
   &.underweight {
-    background-color: $underweightColor;
+    color: $underweightTextColor;
+    background-color: $underweightBackgroundColor;
   }
   &.normal {
-    background-color: $normalColor;
+    color: $normalTextColor;
+    background-color: $normalBackgroundColor;
   }
   &.overweight {
-    background-color: $overweightColor;
+    color: $overweightTextColor;
+    background-color: $overweightBackgroundColor;
   }
   &.obese {
-    background-color: $obeseColor;
+    color: $obeseTextColor;
+    background-color: $obeseBackgroundColor;
   }
 }
 
@@ -150,22 +158,26 @@ select {
     }
     &.underweight {
       .td {
-        background-color: $underweightColor;
+        color: $underweightTextColor;
+        background-color: $underweightBackgroundColor;
       }
     }
     &.normal {
       .td {
-        background-color: $normalColor;
+        color: $normalTextColor;
+        background-color: $normalBackgroundColor;
       }
     }
     &.overweight {
       .td {
-        background-color: $overweightColor;
+        color: $overweightTextColor;
+        background-color: $overweightBackgroundColor;
       }
     }
     &.obese {
       .td {
-        background-color: $obeseColor;
+        color: $obeseTextColor;
+        background-color: $obeseBackgroundColor;
       }
     }
     &:first-child {
