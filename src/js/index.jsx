@@ -142,30 +142,36 @@ const App = () => {
                 Your BMI is <b>{calculatedBmi.bmi}</b>
               </div>
             )
-          : (<div className='bmiResult'>Type your size above</div>)
+          : null
       }
 
-      <div className='bmiTable'>
-        <div className={`tr ${calculatedBmi.status === 'underweight' ? calculatedBmi.status : ''}`}>
-          <div className='td'>{`<`} 18.5</div>
-          <div className='td'>Underweight</div>
-        </div>
+      {
+        calculatedBmi.status
+          ? (
+            <div className='bmiTable'>
+              <div className={`tr ${calculatedBmi.status === 'underweight' ? calculatedBmi.status : ''}`}>
+                <div className='td'>{`<`} 18.5</div>
+                <div className='td'>Underweight</div>
+              </div>
 
-        <div className={`tr ${calculatedBmi.status === 'normal' ? calculatedBmi.status : ''}`}>
-          <div className='td'>18.5 - 24.9</div>
-          <div className='td'>Normal</div>
-        </div>
+              <div className={`tr ${calculatedBmi.status === 'normal' ? calculatedBmi.status : ''}`}>
+                <div className='td'>18.5 - 24.9</div>
+                <div className='td'>Normal</div>
+              </div>
 
-        <div className={`tr ${calculatedBmi.status === 'overweight' ? calculatedBmi.status : ''}`}>
-          <div className='td'>25.0 - 29.9</div>
-          <div className='td'>Overweight</div>
-        </div>
+              <div className={`tr ${calculatedBmi.status === 'overweight' ? calculatedBmi.status : ''}`}>
+                <div className='td'>25.0 - 29.9</div>
+                <div className='td'>Overweight</div>
+              </div>
 
-        <div className={`tr ${calculatedBmi.status === 'obese' ? calculatedBmi.status : ''}`}>
-          <div className='td'>30+</div>
-          <div className='td'>Obese</div>
-        </div>
-      </div>
+              <div className={`tr ${calculatedBmi.status === 'obese' ? calculatedBmi.status : ''}`}>
+                <div className='td'>30+</div>
+                <div className='td'>Obese</div>
+              </div>
+            </div>
+            )
+          : null
+      }
     </div>
   )
 }
