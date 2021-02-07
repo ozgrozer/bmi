@@ -2,7 +2,7 @@
 
 BMI calculator
 
-[https://ozgrozer.github.io/bmi](https://ozgrozer.github.io/bmi)
+[https://ozgrozer.github.io/bmi/](https://ozgrozer.github.io/bmi/)
 
 ## Contribution
 
