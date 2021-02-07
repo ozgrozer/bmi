@@ -1,6 +1,7 @@
 $appWidth: 400px;
 $borderRadius: 4px;
 $borderColor: #cdd6dd;
+$theadBackgroundColor: #fafaf9;
 
 $mobile-max: 767px;
 $tablet-min: 768px;
@@ -49,7 +50,6 @@ body, input, select, button {
 input, select, button {
   width: 100%;
   height: 50px;
-  font-size: 16px;
   padding: 0 15px;
   appearance: none;
   -moz-appearance: none;
@@ -90,6 +90,15 @@ select {
   display: none;
 }
 
+.bmiResult {
+  padding: 15px;
+  margin-top: 30px;
+  line-height: 20px;
+  background-color: #fafaf9;
+  border-radius: $borderRadius;
+  border: 1px solid $borderColor;
+}
+
 .bmiTable {
   margin-top: 30px;
   border-radius: $borderRadius;
@@ -97,22 +106,47 @@ select {
 
   .tr {
     border-top: 1px solid $borderColor;
-    &.thead {
+    &:first-child {
       .td {
         font-weight: bold;
+        background-color: $theadBackgroundColor;
+        &:first-child {
+          border-top-left-radius: $borderRadius;
+        }
+        &:last-child {
+          border-top-right-radius: $borderRadius;
+        }
+      }
+    }
+    &:last-child {
+      .td {
+        &:first-child {
+          border-bottom-left-radius: $borderRadius;
+        }
+        &:last-child {
+          border-bottom-right-radius: $borderRadius;
+        }
       }
     }
     &.underweight {
-      background-color: #74b9ff;
+      .td {
+        background-color: #74b9ff;
+      }
     }
     &.normal {
-      background-color: #54efc4;
+      .td {
+        background-color: #54efc4;
+      }
     }
     &.overweight {
-      background-color: #fab1a0;
+      .td {
+        background-color: #fab1a0;
+      }
     }
     &.obese {
-      background-color: #ff7675;
+      .td {
+        background-color: #ff7675;
+      }
     }
     &:first-child {
       border-top: none;
@@ -124,12 +158,13 @@ select {
     }
 
     .td {
+      width: 58%;
       float: left;
       padding: 15px;
       line-height: 20px;
       border-left: 1px solid $borderColor;
       &:first-child {
-        width: 170px;
+        width: 42%;
         border-left: none;
       }
     }

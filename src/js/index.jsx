@@ -48,8 +48,12 @@ const App = () => {
         </div>
       </Form>
 
+      <div className='bmiResult'>
+        Type your size above
+      </div>
+
       <div className='bmiTable'>
-        <div className='tr thead'>
+        <div className='tr'>
           <div className='td'>BMI</div>
           <div className='td'>Weight Status</div>
         </div>
