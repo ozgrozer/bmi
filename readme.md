@@ -1,0 +1,13 @@
+# bmi
+
+BMI calculator
+
+[https://ozgrozer.github.io/bmi](https://ozgrozer.github.io/bmi)
+
+## Contribution
+
+Feel free to contribute. Open a new [issue](https://github.com/ozgrozer/bmi/issues), or make a [pull request](https://github.com/ozgrozer/bmi/pulls).
+
+## License
+
+[MIT](license)
