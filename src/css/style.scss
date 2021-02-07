@@ -1,3 +1,5 @@
+@import './../font/icomoon/icomoon.css';
+
 $appWidth: 450px;
 $borderRadius: 4px;
 $borderColor: #cdd6dd;
@@ -33,6 +35,10 @@ $widescreen-min: 1920px;
 body, input, select, button {
   font-size: 18px;
   font-family: -apple-system, Ubuntu, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+a {
+  text-decoration: none;
 }
 
 #app {
@@ -196,6 +202,35 @@ select {
       content: '';
       clear: both;
       display: table;
+    }
+  }
+}
+
+.socials {
+  position: fixed;
+  @media (max-width: $mobile-max) {
+    top: 10px;
+    right: 10px;
+  }
+  @media (min-width: $tablet-min) {
+    top: 20px;
+    right: 20px;
+  }
+
+  a {
+    font-size: 24px;
+    margin-left: 10px;
+    vertical-align: top;
+    display: inline-block;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .icon-github {
+      color: #161b21;
+    }
+    .icon-twitter {
+      color: #1ea1f3;
     }
   }
 }

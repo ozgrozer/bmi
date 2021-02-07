@@ -172,6 +172,16 @@ const App = () => {
             )
           : null
       }
+
+      <div className='socials'>
+        <a href='https://github.com/ozgrozer/bmi' target='_blank' rel='noreferrer'>
+          <i className='icon icon-github' />
+        </a>
+
+        <a href='https://twitter.com/ozgrozer' target='_blank' rel='noreferrer'>
+          <i className='icon icon-twitter' />
+        </a>
+      </div>
     </div>
   )
 }

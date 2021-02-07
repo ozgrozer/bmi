@@ -2,7 +2,8 @@
   "name": "bmi",
   "scripts": {
     "dev": "parcel ./src/html/index.html --out-dir ./dist --public-url / --port 1280",
-    "build": "parcel build ./src/html/index.html --out-dir ./dist --public-url /bmi --no-source-maps"
+    "build": "parcel build ./src/html/index.html --out-dir ./dist --public-url /bmi --no-source-maps",
+    "icomoon": "node ./src/scripts/icomoon.js"
   },
   "license": "MIT",
   "dependencies": {
