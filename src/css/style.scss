@@ -56,6 +56,25 @@ body, input, select, button {
     display: block;
     margin-bottom: 5px;
   }
+
+  .row {
+    &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+
+    .col {
+      width: 50%;
+      float: left;
+      &:first-child {
+        padding-right: 10px;
+      }
+      &:last-child {
+        padding-left: 10px;
+      }
+    }
+  }
 }
 
 input, select, button {
@@ -93,7 +112,7 @@ button {
 select {
   background-repeat: no-repeat;
   background-size: 5px 5px, 5px 5px;
-  background-position: right 20px top 18px, right 15px top 18px;
+  background-position: right 20px top 22px, right 15px top 22px;
   background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
 }
 
@@ -133,6 +152,11 @@ select {
 .bmiTable {
   margin-top: 30px;
   border-radius: $borderRadius;
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
 
   .tr {
     float: left;
