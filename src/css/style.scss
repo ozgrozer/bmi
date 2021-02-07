@@ -1,7 +1,7 @@
-$appWidth: 400px;
+$appWidth: 450px;
 $borderRadius: 4px;
 $borderColor: #cdd6dd;
-$theadBackgroundColor: #fafaf9;
+$trBackgroundColor: #eee;
 
 $underweightTextColor: #055160;
 $underweightBackgroundColor: #cff4fc;
@@ -131,75 +131,45 @@ select {
 .bmiTable {
   margin-top: 30px;
   border-radius: $borderRadius;
-  border: 1px solid $borderColor;
 
   .tr {
-    border-top: 1px solid $borderColor;
+    float: left;
+    padding: 15px;
+    font-size: 14px;
+    margin-left: 1px;
+    text-align: center;
+    width: calc(25% - 1px);
+    background-color: $trBackgroundColor;
     &:first-child {
-      .td {
-        font-weight: bold;
-        background-color: $theadBackgroundColor;
-        &:first-child {
-          border-top-left-radius: $borderRadius;
-        }
-        &:last-child {
-          border-top-right-radius: $borderRadius;
-        }
-      }
+      margin-left: 0;
+      width: calc(25%);
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
     }
     &:last-child {
-      .td {
-        &:first-child {
-          border-bottom-left-radius: $borderRadius;
-        }
-        &:last-child {
-          border-bottom-right-radius: $borderRadius;
-        }
-      }
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
     }
     &.underweight {
-      .td {
-        color: $underweightTextColor;
-        background-color: $underweightBackgroundColor;
-      }
+      color: $underweightTextColor;
+      background-color: $underweightBackgroundColor;
     }
     &.normal {
-      .td {
-        color: $normalTextColor;
-        background-color: $normalBackgroundColor;
-      }
+      color: $normalTextColor;
+      background-color: $normalBackgroundColor;
     }
     &.overweight {
-      .td {
-        color: $overweightTextColor;
-        background-color: $overweightBackgroundColor;
-      }
+      color: $overweightTextColor;
+      background-color: $overweightBackgroundColor;
     }
     &.obese {
-      .td {
-        color: $obeseTextColor;
-        background-color: $obeseBackgroundColor;
-      }
-    }
-    &:first-child {
-      border-top: none;
+      color: $obeseTextColor;
+      background-color: $obeseBackgroundColor;
     }
     &:after {
       content: '';
       clear: both;
       display: table;
-    }
-
-    .td {
-      width: 58%;
-      float: left;
-      padding: 15px;
-      line-height: 20px;
-      border-left: 1px solid $borderColor;
-      &:first-child {
-        width: 42%;
-        border-left: none;
-      }
     }
   }
 }

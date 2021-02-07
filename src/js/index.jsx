@@ -79,13 +79,8 @@ const App = () => {
       }
 
       <div className='bmiTable'>
-        <div className='tr'>
-          <div className='td'>BMI</div>
-          <div className='td'>Weight Status</div>
-        </div>
-
         <div className={`tr ${calculatedBmi.status === 'underweight' ? calculatedBmi.status : ''}`}>
-          <div className='td'>Below 18.5</div>
+          <div className='td'>{`<`} 18.5</div>
           <div className='td'>Underweight</div>
         </div>
 
@@ -100,7 +95,7 @@ const App = () => {
         </div>
 
         <div className={`tr ${calculatedBmi.status === 'obese' ? calculatedBmi.status : ''}`}>
-          <div className='td'>30.0 and above</div>
+          <div className='td'>30+</div>
           <div className='td'>Obese</div>
         </div>
       </div>
